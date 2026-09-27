@@ -1,4 +1,5 @@
 import Counter from "./counter";
+import Image from "next/image";
 import {
   ArrowDown,
   ArrowUpRight,
@@ -46,7 +47,7 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="ZiRA home">
-          <img src="/zira-logo.png" alt="ZiRA Green Futures Initiative" />
+          <Image src="/zira-logo.png" alt="ZiRA Green Futures Initiative" width={1642} height={578} sizes="168px" />
         </a>
         <nav className="desktop-nav" aria-label="Primary navigation">
           <a href="#about">About</a>
@@ -60,10 +61,13 @@ export default function Home() {
       </header>
 
       <section className="hero" id="top">
-        <img
+        <Image
           src="/zira-clean-cooking-hero.png"
           alt="A woman preparing a meal with an efficient biomass cookstove"
           className="hero-image"
+          fill
+          preload
+          sizes="100vw"
         />
         <div className="hero-wash" />
         <div className="hero-content">
@@ -91,7 +95,7 @@ export default function Home() {
       <section className="mission section-shell" id="mission">
         <div className="mission-number">
           <div className="stove-illustration" aria-hidden="true">
-            <img src="/clean-cookstove-concept.png" alt="" />
+            <Image src="/clean-cookstove-concept.png" alt="" width={1222} height={1287} sizes="(max-width: 640px) 360px, 460px" />
           </div>
           <Counter /><p>households by 2030</p>
         </div>
@@ -162,7 +166,13 @@ export default function Home() {
       <section className="field-impact" id="impact">
         <div className="section-shell field-impact-inner">
           <div className="field-impact-media">
-            <img src="/piko-outreach.webp" alt="ZiRA team engaging women during the Piko Village clean cooking outreach" />
+            <Image
+              src="/piko-outreach.webp"
+              alt="ZiRA team engaging women during the Piko Village clean cooking outreach"
+              width={1800}
+              height={1200}
+              sizes="(max-width: 980px) calc(100vw - 56px), 56vw"
+            />
           </div>
           <div className="field-impact-copy">
             <p className="eyebrow light">Impact · Piko Village</p>
@@ -183,7 +193,9 @@ export default function Home() {
         <div className="team-grid">
           {team.map(([name, role, photo]) => (
             <article className="team-card" key={name}>
-              <div className="team-photo"><img src={photo} alt={`${name}, ${role}`} /></div>
+              <div className="team-photo">
+                <Image src={photo} alt={`${name}, ${role}`} fill sizes="(max-width: 640px) calc(100vw - 34px), (max-width: 980px) 50vw, 25vw" />
+              </div>
               <div className="team-card-copy">
                 <h3>{name}</h3><p>{role}</p>
               </div>
@@ -204,7 +216,7 @@ export default function Home() {
 
       <footer className="site-footer section-shell">
         <div className="footer-brand">
-          <img src="/zira-logo.png" alt="ZiRA Green Futures Initiative" />
+          <Image src="/zira-logo.png" alt="ZiRA Green Futures Initiative" width={1642} height={578} sizes="180px" />
           <p>Equity · Inclusivity · Impact</p>
         </div>
         <div className="footer-location"><MapPin size={18} /> Abuja, Nigeria</div>

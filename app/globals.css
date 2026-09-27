@@ -3,6 +3,7 @@
   --color-ink: #092b21;
   --color-forest: #0b3d2e;
   --color-zira-green: #47a60e;
+  --color-zira-green-accessible: #45a20e;
   --color-lime: #9df43a;
   --color-zira-yellow: #feb50e;
   --color-zira-blue: #4797c8;
@@ -285,7 +286,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 .stove-illustration { width: min(460px,100%); margin: 0 0 clamp(22px,3vw,42px) -28px; }
 .stove-illustration img { display: block; width: 100%; height: auto; max-height: 460px; object-fit: contain; object-position: left bottom; }
-.mission-number span { display: block; color: var(--brand-green); font-size: clamp(5rem,11vw,11rem); font-weight: 600; letter-spacing: -.085em; line-height: .78; }
+.mission-number > span { display: block; color: var(--color-zira-green-accessible); font-size: clamp(5rem,11vw,11rem); font-weight: 600; letter-spacing: -.085em; line-height: .78; }
 .mission-number p { margin: 30px 0 0; font-size: clamp(1.4rem,2.3vw,2.25rem); letter-spacing: -.04em; }
 .mission-copy > p:last-child { margin-top: 32px; }
 
@@ -303,7 +304,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .team-heading svg { color: #3ba70a; }
 .team-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; margin-top: 72px; background: var(--line); border: 1px solid var(--line); }
 .team-card { overflow: hidden; background: var(--paper); }
-.team-photo { aspect-ratio: 4 / 5; overflow: hidden; background: #dfe5dc; }
+.team-photo { position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: #dfe5dc; }
 .team-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 24%; transition: transform 400ms ease; }
 .team-card:hover .team-photo img { transform: scale(1.025); }
 .team-card-copy { min-height: 130px; padding: 26px 24px; }
@@ -366,6 +367,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .header-button { min-height: 42px; padding-inline: 15px; font-size: .85rem; }
   .hero { min-height: 720px; }
   .hero-image { object-position: 67% center; }
+  .hero-image { animation: none; }
   .hero-wash { background: linear-gradient(0deg,rgba(5,31,24,.96) 0%,rgba(5,31,24,.68) 58%,rgba(5,31,24,.28) 100%); }
   .hero-content { padding-bottom: 52px; }
   .hero h1 { font-size: clamp(3.35rem,17vw,5rem); }

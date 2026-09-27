@@ -21,5 +21,5 @@ export default function Counter() {
     if (ref.current) observer.observe(ref.current);
     return () => { observer.disconnect(); cancelAnimationFrame(frame); };
   }, []);
-  return <span ref={ref} aria-label="50,000"><span aria-hidden="true">{value.toLocaleString("en-US")}</span></span>;
+  return <span ref={ref}>{value.toLocaleString("en-US")}</span>;
 }

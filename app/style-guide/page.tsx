@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./style-guide.module.css";
 
 const colours = [
@@ -21,7 +22,7 @@ export default function StyleGuide() {
   return (
     <main className={styles.guide}>
       <header className={styles.header}>
-        <img src="/zira-logo.png" alt="ZiRA Green Futures Initiative" />
+        <Image src="/zira-logo.png" alt="ZiRA Green Futures Initiative" width={1642} height={578} sizes="180px" />
         <Link href="/">View website</Link>
       </header>
 
