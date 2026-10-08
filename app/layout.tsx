@@ -21,13 +21,13 @@ export const metadata: Metadata = {
     siteName: "ZiRA Green Futures Initiative",
     title: "Better cooking. Brighter futures.",
     description: "Affordable, efficient and locally adapted clean cooking solutions for underserved communities.",
-    images: [{ url: "/zira-clean-cooking-hero.png", width: 1586, height: 992, alt: "Clean cooking with ZiRA Green Futures Initiative" }],
+    images: [{ url: "/zira-og-image.jpg", width: 1200, height: 630, alt: "A woman cooking with a ZiRA clean cookstove" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Better cooking. Brighter futures.",
     description: "Affordable, efficient and locally adapted clean cooking solutions for underserved communities.",
-    images: ["/zira-clean-cooking-hero.png"],
+    images: ["/zira-og-image.jpg"],
   },
   robots: { index: true, follow: true },
 };
