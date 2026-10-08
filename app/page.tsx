@@ -62,8 +62,8 @@ export default function Home() {
 
       <section className="hero" id="top">
         <Image
-          src="/zira-clean-cooking-hero.png"
-          alt="A woman preparing a meal with an efficient biomass cookstove"
+          src="/zira-clean-cooking-hero-final.webp"
+          alt="A woman preparing a meal with a ZiRA clean cookstove"
           className="hero-image"
           fill
           preload
