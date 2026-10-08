@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://ziragreen.org/sitemap.xml",
+    sitemap: "https://www.ziragreen.org/sitemap.xml",
   };
 }

@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
-const siteUrl = "https://ziragreen.org";
+const siteUrl = "https://www.ziragreen.org";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -12,16 +12,16 @@ export const metadata: Metadata = {
   },
   description: "Expanding access to affordable, cleaner and more efficient cooking solutions for underserved communities.",
   keywords: ["clean cooking", "clean cookstoves", "bio-briquettes", "climate education", "Nigeria", "energy access"],
-  alternates: { canonical: "/" },
+  alternates: { canonical: siteUrl },
   icons: { icon: "/favicon.png", shortcut: "/favicon.png", apple: "/favicon.png" },
   openGraph: {
     type: "website",
     locale: "en_NG",
-    url: "/",
+    url: siteUrl,
     siteName: "ZiRA Green Futures Initiative",
     title: "Better cooking. Brighter futures.",
     description: "Affordable, efficient and locally adapted clean cooking solutions for underserved communities.",
-    images: [{ url: "/zira-og-image.jpg", width: 1200, height: 630, alt: "A woman cooking with a ZiRA clean cookstove" }],
+    images: [{ url: "/zira-og-image.jpg", width: 1200, height: 630, type: "image/jpeg", alt: "A woman cooking with a ZiRA clean cookstove" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -60,6 +60,9 @@ const organizationSchema = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en-NG">
+      <head>
+        <meta property="og:logo" content={`${siteUrl}/zira-logo.png`} />
+      </head>
       <body>
         <script
           type="application/ld+json"
