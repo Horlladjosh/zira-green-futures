@@ -3,14 +3,16 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const siteUrl = "https://www.ziragreen.org";
+const siteTitle = "ZiRA Green Futures Initiative | Clean Cooking for Every Home";
+const siteDescription = "Expanding access to affordable, cleaner and more efficient cooking solutions for underserved communities.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "ZiRA Green Futures Initiative | Clean Cooking for Every Home",
+    default: siteTitle,
     template: "%s | ZiRA Green Futures Initiative",
   },
-  description: "Expanding access to affordable, cleaner and more efficient cooking solutions for underserved communities.",
+  description: siteDescription,
   keywords: ["clean cooking", "clean cookstoves", "bio-briquettes", "climate education", "Nigeria", "energy access"],
   alternates: { canonical: siteUrl },
   icons: { icon: "/favicon.png", shortcut: "/favicon.png", apple: "/favicon.png" },
@@ -19,14 +21,14 @@ export const metadata: Metadata = {
     locale: "en_NG",
     url: siteUrl,
     siteName: "ZiRA Green Futures Initiative",
-    title: "Better cooking. Brighter futures.",
-    description: "Affordable, efficient and locally adapted clean cooking solutions for underserved communities.",
+    title: siteTitle,
+    description: siteDescription,
     images: [{ url: "/zira-og-image.jpg", width: 1200, height: 630, type: "image/jpeg", alt: "A woman cooking with a ZiRA clean cookstove" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Better cooking. Brighter futures.",
-    description: "Affordable, efficient and locally adapted clean cooking solutions for underserved communities.",
+    title: siteTitle,
+    description: siteDescription,
     images: ["/zira-og-image.jpg"],
   },
   robots: { index: true, follow: true },
