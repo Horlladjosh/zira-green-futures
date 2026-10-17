@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import GalleryPage, { type GalleryImage } from "../gallery-page";
 
 export const metadata: Metadata = {
-  title: "Piko Village Outreach",
+  title: "Community Sensitization",
   description: "ZiRA's clean cooking community entry and baseline outreach in Piko Village, Bwari Area Council, Abuja.",
 };
 
@@ -22,7 +22,7 @@ const images: GalleryImage[] = [
 export default function PikoOutreachPage() {
   return (
     <GalleryPage
-      title="Piko Village Outreach"
+      title="Community Sensitization"
       label="Piko Village · Abuja · April 2026"
       description="ZiRA met with 20 women in Piko Village to understand daily cooking realities, health concerns and what an affordable transition to cleaner cooking should look like."
       hero={{ src: "/gallery/piko/piko-020.webp", width: 1800, height: 1200, alt: "Women and ZiRA team members in a Piko Village focus group discussion" }}

@@ -16,8 +16,8 @@ export default function SiteHeader() {
         <details className="nav-dropdown">
           <summary>Gallery <ChevronDown size={15} strokeWidth={2.2} /></summary>
           <div className="nav-dropdown-menu">
-            <Link href="/gallery/piko-outreach">Piko Outreach</Link>
-            <Link href="/gallery/community-outreach">Community Sensitization</Link>
+            <Link href="/gallery/piko-outreach">Community Sensitization</Link>
+            <Link href="/gallery/community-outreach">Clean Cooking Demonstration</Link>
           </div>
         </details>
       </nav>
@@ -33,8 +33,8 @@ export default function SiteHeader() {
             <Link href="/#work">What we do</Link>
             <Link href="/#impact">Impact</Link>
             <span>Gallery</span>
-            <Link className="mobile-sub-link" href="/gallery/piko-outreach">Piko Outreach</Link>
-            <Link className="mobile-sub-link" href="/gallery/community-outreach">Community Sensitization</Link>
+            <Link className="mobile-sub-link" href="/gallery/piko-outreach">Community Sensitization</Link>
+            <Link className="mobile-sub-link" href="/gallery/community-outreach">Clean Cooking Demonstration</Link>
           </nav>
         </details>
       </div>
