@@ -27,6 +27,7 @@ export default function PikoOutreachPage() {
       description="ZiRA met with 20 women in Piko Village to understand daily cooking realities, health concerns and what an affordable transition to cleaner cooking should look like."
       hero={{ src: "/gallery/piko/piko-020.webp", width: 1800, height: 1200, alt: "Women and ZiRA team members in a Piko Village focus group discussion" }}
       images={images}
+      reportHref="https://drive.google.com/file/d/1WwkbS2cdBKiB76SP5BrjDfkHQyV_EV0W/view"
     />
   );
 }

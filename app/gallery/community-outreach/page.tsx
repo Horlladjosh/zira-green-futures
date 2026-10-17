@@ -29,6 +29,11 @@ export default function CommunityOutreachPage() {
       description="ZiRA returned to Piko Village for a practical clean cooking demonstration, helping women explore cleaner cooking solutions that fit everyday meals, household budgets and local routines."
       hero={{ src: "/gallery/community/community-8492.webp", width: 2400, height: 1618, alt: "ZiRA team and Piko Village community members gathered after the clean cooking demonstration" }}
       images={images}
+      video={{
+        src: "/gallery/community/zira-clean-cooking-demonstration.mp4",
+        poster: "/gallery/community/zira-clean-cooking-demonstration-poster.webp",
+        title: "See the demonstration in action",
+      }}
     />
   );
 }

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 import ContactSection from "../contact-section";
 import SiteFooter from "../site-footer";
 import SiteHeader from "../site-header";
@@ -16,9 +17,15 @@ type GalleryPageProps = {
   description: string;
   hero: GalleryImage;
   images: GalleryImage[];
+  reportHref?: string;
+  video?: {
+    src: string;
+    poster: string;
+    title: string;
+  };
 };
 
-export default function GalleryPage({ title, label, description, hero, images }: GalleryPageProps) {
+export default function GalleryPage({ title, label, description, hero, images, reportHref, video }: GalleryPageProps) {
   return (
     <main id="top">
       <SiteHeader />
@@ -37,8 +44,26 @@ export default function GalleryPage({ title, label, description, hero, images }:
           <p>{label}</p>
           <h1>{title}</h1>
           <div className="gallery-hero-summary">{description}</div>
+          {reportHref && (
+            <a className="pill-button gallery-report-button" href={reportHref} target="_blank" rel="noreferrer">
+              Read our report <ArrowUpRight size={18} strokeWidth={2.2} />
+            </a>
+          )}
         </div>
       </section>
+
+      {video && (
+        <section className="gallery-video-section section-shell" aria-labelledby="gallery-video-title">
+          <div className="gallery-video-heading">
+            <h2 id="gallery-video-title">{video.title}</h2>
+            <p>Watch the community demonstration unfold, from introducing the stove to preparing a meal together.</p>
+          </div>
+          <video controls preload="metadata" poster={video.poster} playsInline>
+            <source src={video.src} type="video/mp4" />
+            Your browser does not support the video element.
+          </video>
+        </section>
+      )}
 
       <section className="gallery-section section-shell" aria-label={`${title} photographs`}>
         <div className="gallery-intro">
