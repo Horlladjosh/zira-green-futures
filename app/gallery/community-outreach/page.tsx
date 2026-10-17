@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import GalleryPage, { type GalleryImage } from "../gallery-page";
 
 export const metadata: Metadata = {
-  title: "Community Sensitization, Cookstove Demonstration",
-  description: "ZiRA's community sensitization and practical clean cookstove demonstration in Piko Village, Abuja.",
+  title: "Community Sensitization, Clean Cooking Demonstration",
+  description: "ZiRA's community sensitization and practical clean cooking demonstration in Piko Village, Abuja.",
 };
 
 const images: GalleryImage[] = [
@@ -23,9 +23,9 @@ const images: GalleryImage[] = [
 export default function CommunityOutreachPage() {
   return (
     <GalleryPage
-      title="Community Sensitization, Cookstove Demonstration"
+      title="Community Sensitization, Clean Cooking Demonstration"
       label="Piko Village · Abuja · October 2026"
-      description="ZiRA returned to Piko Village for community sensitization and a practical cookstove demonstration, helping women explore cleaner cooking solutions that fit everyday meals, household budgets and local routines."
+      description="ZiRA returned to Piko Village for community sensitization and a practical clean cooking demonstration, helping women explore cleaner cooking solutions that fit everyday meals, household budgets and local routines."
       hero={{ src: "/gallery/community/community-8469.webp", width: 1800, height: 1200, alt: "ZiRA team and Piko Village participants holding clean cooking workbooks beside a cookstove" }}
       images={images}
     />
