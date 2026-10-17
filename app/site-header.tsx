@@ -41,8 +41,8 @@ export default function SiteHeader() {
         <details className="nav-dropdown">
           <summary>Gallery <ChevronDown size={15} strokeWidth={2.2} /></summary>
           <div className="nav-dropdown-menu">
-            <Link href="/gallery/piko-outreach">Community Sensitization</Link>
-            <Link href="/gallery/community-outreach">Community Demonstration</Link>
+            <Link href="/gallery/piko-community-sensitization">Community Sensitization</Link>
+            <Link href="/gallery/piko-clean-cooking-demonstration">Community Demonstration</Link>
           </div>
         </details>
       </nav>
@@ -67,8 +67,8 @@ export default function SiteHeader() {
             <Link href="/#work" onClick={closeMobileMenu}>What we do</Link>
             <Link href="/#impact" onClick={closeMobileMenu}>Impact</Link>
             <span>Gallery</span>
-            <Link className="mobile-sub-link" href="/gallery/piko-outreach" onClick={closeMobileMenu}>Community Sensitization</Link>
-            <Link className="mobile-sub-link" href="/gallery/community-outreach" onClick={closeMobileMenu}>Community Demonstration</Link>
+            <Link className="mobile-sub-link" href="/gallery/piko-community-sensitization" onClick={closeMobileMenu}>Community Sensitization</Link>
+            <Link className="mobile-sub-link" href="/gallery/piko-clean-cooking-demonstration" onClick={closeMobileMenu}>Community Demonstration</Link>
             <a className="pill-button mobile-menu-cta" href="#contact" onClick={closeMobileMenu}>
               Get in touch <ArrowUpRight size={18} strokeWidth={2.2} />
             </a>
