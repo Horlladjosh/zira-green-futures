@@ -62,8 +62,8 @@ export default function Home() {
 
       <section className="hero" id="top">
         <Image
-          src="/zira-clean-cooking-hero-final.webp"
-          alt="A woman preparing a meal with a ZiRA clean cookstove"
+          src="/zira-outreach-hero.webp"
+          alt="A woman cooking with a ZiRA clean cookstove during the Piko Village outreach"
           className="hero-image"
           fill
           preload

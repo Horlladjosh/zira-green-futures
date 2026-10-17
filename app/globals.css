@@ -135,7 +135,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center bottom;
   animation: heroReveal 1.1s ease-out both;
 }
 .hero-wash {
@@ -366,7 +366,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .brand { width: 142px; height: 48px; }
   .header-button { min-height: 42px; padding-inline: 15px; font-size: .85rem; }
   .hero { min-height: 720px; }
-  .hero-image { object-position: 67% center; }
+  .hero-image { object-position: 67% bottom; }
   .hero-image { animation: none; }
   .hero-wash { background: linear-gradient(0deg,rgba(5,31,24,.96) 0%,rgba(5,31,24,.68) 58%,rgba(5,31,24,.28) 100%); }
   .hero-content { padding-bottom: 52px; }
