@@ -2,30 +2,30 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useEffect, useState } from "react";
 import { ArrowUpRight, ChevronDown, Menu, X } from "lucide-react";
 
 export default function SiteHeader() {
-  const mobileMenuRef = useRef<HTMLDetailsElement>(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const menu = mobileMenuRef.current;
-    if (!menu) return;
+    document.body.classList.toggle("menu-open", mobileMenuOpen);
+    document.documentElement.classList.toggle("menu-open", mobileMenuOpen);
 
-    const handleToggle = () => {
-      document.body.classList.toggle("menu-open", menu.open);
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setMobileMenuOpen(false);
     };
 
-    menu.addEventListener("toggle", handleToggle);
+    window.addEventListener("keydown", handleKeyDown);
     return () => {
-      menu.removeEventListener("toggle", handleToggle);
+      window.removeEventListener("keydown", handleKeyDown);
       document.body.classList.remove("menu-open");
+      document.documentElement.classList.remove("menu-open");
     };
-  }, []);
+  }, [mobileMenuOpen]);
 
   const closeMobileMenu = () => {
-    mobileMenuRef.current?.removeAttribute("open");
-    document.body.classList.remove("menu-open");
+    setMobileMenuOpen(false);
   };
 
   return (
@@ -51,12 +51,18 @@ export default function SiteHeader() {
         <a className="pill-button header-button" href="#contact">
           Get in touch <ArrowUpRight size={17} strokeWidth={2.2} />
         </a>
-        <details className="mobile-menu" ref={mobileMenuRef}>
-          <summary aria-label="Toggle navigation">
-            <Menu className="menu-open-icon" size={22} />
-            <X className="menu-close-icon" size={22} />
-          </summary>
-          <nav className="mobile-menu-panel" aria-label="Mobile navigation">
+        <div className={`mobile-menu${mobileMenuOpen ? " is-open" : ""}`}>
+          <button
+            className="mobile-menu-toggle"
+            type="button"
+            aria-label={mobileMenuOpen ? "Close navigation" : "Open navigation"}
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-navigation"
+            onClick={() => setMobileMenuOpen((open) => !open)}
+          >
+            {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
+          <nav id="mobile-navigation" className="mobile-menu-panel" aria-label="Mobile navigation" aria-hidden={!mobileMenuOpen}>
             <Link href="/#about" onClick={closeMobileMenu}>About</Link>
             <Link href="/#work" onClick={closeMobileMenu}>What we do</Link>
             <Link href="/#impact" onClick={closeMobileMenu}>Impact</Link>
@@ -67,7 +73,7 @@ export default function SiteHeader() {
               Get in touch <ArrowUpRight size={18} strokeWidth={2.2} />
             </a>
           </nav>
-        </details>
+        </div>
       </div>
     </header>
   );
