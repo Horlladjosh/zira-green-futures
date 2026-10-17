@@ -42,8 +42,7 @@ export default function GalleryPage({ title, label, description, hero, images }:
 
       <section className="gallery-section section-shell" aria-label={`${title} photographs`}>
         <div className="gallery-intro">
-          <h2>From the community</h2>
-          <p>Moments of listening, learning and practical action.</p>
+          <h2>Highlights from the community engagement</h2>
         </div>
         <div className="masonry-gallery">
           {images.map((image) => (
