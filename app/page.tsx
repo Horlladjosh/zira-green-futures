@@ -29,9 +29,9 @@ const programmes = [
 
 const team = [
   ["Rinret Best", "Founder", "/team/rinret.webp"],
-  ["Hauwa Barde", "Program Manager & Business Development", "/team/hauwa.webp"],
+  ["Hauwa Barde", "Program Manager & Business Development Officer", "/team/hauwa.webp"],
   ["Petke Mangni", "Community Liaison Officer", "/team/petke-cropped.webp"],
-  ["Deborah Yakubu", "Administration & Logistics", "/team/deborah.webp"],
+  ["Deborah Yakubu", "Administration & Logistics Officer", "/team/deborah.webp"],
 ];
 
 function WhatsAppIcon({ size = 21 }: { size?: number }) {
@@ -95,7 +95,7 @@ export default function Home() {
       <section className="mission section-shell" id="mission">
         <div className="mission-number">
           <div className="stove-illustration" aria-hidden="true">
-            <Image src="/clean-cookstove-concept.png" alt="" width={1222} height={1287} sizes="(max-width: 640px) 360px, 460px" />
+            <Image src="/zira-clean-cookstove.png" alt="" width={900} height={723} sizes="(max-width: 640px) 360px, 460px" />
           </div>
           <Counter /><p>households by 2030</p>
         </div>
