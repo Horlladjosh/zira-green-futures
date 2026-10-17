@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/next";
+import BackToTop from "./back-to-top";
 import "./globals.css";
 
 const siteUrl = "https://www.ziragreen.org";
@@ -71,6 +72,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
         {children}
+        <BackToTop />
         <Analytics />
       </body>
     </html>

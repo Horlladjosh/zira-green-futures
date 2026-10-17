@@ -1,47 +1,10 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, ChevronDown, Menu } from "lucide-react";
-import { useEffect, useState } from "react";
 
 export default function SiteHeader() {
-  const [visible, setVisible] = useState(true);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    let lastY = window.scrollY;
-    let ticking = false;
-
-    const updateHeader = () => {
-      const currentY = window.scrollY;
-      setScrolled(currentY > 24);
-
-      if (currentY <= 24) {
-        setVisible(true);
-      } else if (currentY > lastY + 6) {
-        setVisible(false);
-      } else if (currentY < lastY - 6) {
-        setVisible(true);
-      }
-
-      lastY = currentY;
-      ticking = false;
-    };
-
-    const onScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(updateHeader);
-        ticking = true;
-      }
-    };
-
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   return (
-    <header className={`site-header ${visible ? "nav-visible" : "nav-hidden"} ${scrolled ? "nav-scrolled" : ""}`}>
+    <header className="site-header">
       <Link className="brand" href="/" aria-label="ZiRA home">
         <Image src="/zira-logo.png" alt="ZiRA Green Futures Initiative" width={1642} height={578} sizes="168px" />
       </Link>
