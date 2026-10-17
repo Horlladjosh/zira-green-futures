@@ -17,15 +17,15 @@ export default function SiteHeader() {
           <summary>Gallery <ChevronDown size={15} strokeWidth={2.2} /></summary>
           <div className="nav-dropdown-menu">
             <Link href="/gallery/piko-outreach">Piko Outreach</Link>
-            <Link href="/gallery/community-outreach">Community Outreach</Link>
+            <Link href="/gallery/community-outreach">Community Sensitization</Link>
           </div>
         </details>
       </nav>
 
       <div className="header-actions">
-        <Link className="pill-button header-button" href="/#contact">
+        <a className="pill-button header-button" href="#contact">
           Work with us <ArrowUpRight size={17} strokeWidth={2.2} />
-        </Link>
+        </a>
         <details className="mobile-menu">
           <summary aria-label="Open navigation"><Menu size={22} /></summary>
           <nav className="mobile-menu-panel" aria-label="Mobile navigation">
@@ -34,7 +34,7 @@ export default function SiteHeader() {
             <Link href="/#impact">Impact</Link>
             <span>Gallery</span>
             <Link className="mobile-sub-link" href="/gallery/piko-outreach">Piko Outreach</Link>
-            <Link className="mobile-sub-link" href="/gallery/community-outreach">Community Outreach</Link>
+            <Link className="mobile-sub-link" href="/gallery/community-outreach">Community Sensitization</Link>
           </nav>
         </details>
       </div>

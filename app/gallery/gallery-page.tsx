@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ContactSection from "../contact-section";
 import SiteFooter from "../site-footer";
 import SiteHeader from "../site-header";
 
@@ -59,6 +60,7 @@ export default function GalleryPage({ title, label, description, hero, images }:
         </div>
       </section>
 
+      <ContactSection />
       <SiteFooter />
     </main>
   );

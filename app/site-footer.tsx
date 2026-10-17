@@ -9,7 +9,7 @@ export default function SiteFooter() {
         <p>Equity · Inclusivity · Impact</p>
       </div>
       <div className="footer-location"><MapPin size={18} /> Abuja, Nigeria</div>
-      <div className="footer-links"><a href="https://instagram.com/zira_green26">Instagram</a><a href="#top">Back to top ↑</a></div>
+      <div className="footer-links"><a href="https://instagram.com/zira_green26">Instagram</a><a href="https://wa.me/2349012335037">WhatsApp</a></div>
     </footer>
   );
 }

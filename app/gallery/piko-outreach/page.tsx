@@ -23,7 +23,7 @@ export default function PikoOutreachPage() {
   return (
     <GalleryPage
       title="Piko Village Outreach"
-      label="Bwari Area Council, Abuja · April 2026"
+      label="Piko Village · Abuja · April 2026"
       description="ZiRA met with 20 women in Piko Village to understand daily cooking realities, health concerns and what an affordable transition to cleaner cooking should look like."
       hero={{ src: "/gallery/piko/piko-020.webp", width: 1800, height: 1200, alt: "Women and ZiRA team members in a Piko Village focus group discussion" }}
       images={images}

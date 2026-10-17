@@ -2,14 +2,13 @@ import type { Metadata } from "next";
 import GalleryPage, { type GalleryImage } from "../gallery-page";
 
 export const metadata: Metadata = {
-  title: "Community Cookstove Outreach",
-  description: "A ZiRA community session focused on practical clean cooking education and cookstove demonstrations.",
+  title: "Community Sensitization, Cookstove Demonstration",
+  description: "ZiRA's community sensitization and practical clean cookstove demonstration in Piko Village, Abuja.",
 };
 
 const images: GalleryImage[] = [
   { src: "/gallery/community/community-8408.webp", width: 1800, height: 1200, alt: "Women gathered for a ZiRA clean cooking community session" },
   { src: "/gallery/community/community-8442.webp", width: 1800, height: 1200, alt: "Community members observing a practical clean cooking demonstration" },
-  { src: "/gallery/community/community-8469.webp", width: 1800, height: 1200, alt: "ZiRA team and community participants with a clean cookstove" },
   { src: "/gallery/community/community-8475.webp", width: 1800, height: 1226, alt: "Community participants standing with a ZiRA clean cookstove" },
   { src: "/gallery/community/community-8484.webp", width: 1800, height: 1200, alt: "Women and ZiRA team members after the cookstove session" },
   { src: "/gallery/community/community-8499.webp", width: 1800, height: 1278, alt: "ZiRA outreach team members at the community event" },
@@ -24,10 +23,10 @@ const images: GalleryImage[] = [
 export default function CommunityOutreachPage() {
   return (
     <GalleryPage
-      title="Community Cookstove Outreach"
-      label="Clean cooking demonstration"
-      description="A practical community session where women explored cleaner cooking, saw the ZiRA stove in use and discussed solutions that fit everyday meals, household budgets and local routines."
-      hero={{ src: "/gallery/community/community-8492.webp", width: 1800, height: 1214, alt: "ZiRA team and community members gathered after a clean cooking outreach" }}
+      title="Community Sensitization, Cookstove Demonstration"
+      label="Piko Village · Abuja · October 2026"
+      description="ZiRA returned to Piko Village for community sensitization and a practical cookstove demonstration, helping women explore cleaner cooking solutions that fit everyday meals, household budgets and local routines."
+      hero={{ src: "/gallery/community/community-8469.webp", width: 1800, height: 1200, alt: "ZiRA team and Piko Village participants holding clean cooking workbooks beside a cookstove" }}
       images={images}
     />
   );
