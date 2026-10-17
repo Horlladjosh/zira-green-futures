@@ -1,5 +1,7 @@
 import Counter from "./counter";
 import Image from "next/image";
+import SiteFooter from "./site-footer";
+import SiteHeader from "./site-header";
 import {
   ArrowDown,
   ArrowUpRight,
@@ -7,7 +9,6 @@ import {
   Flame,
   HandHeart,
   Leaf,
-  MapPin,
   Phone,
   Users,
 } from "lucide-react";
@@ -45,20 +46,7 @@ function WhatsAppIcon({ size = 21 }: { size?: number }) {
 export default function Home() {
   return (
     <main>
-      <header className="site-header">
-        <a className="brand" href="#top" aria-label="ZiRA home">
-          <Image src="/zira-logo.png" alt="ZiRA Green Futures Initiative" width={1642} height={578} sizes="168px" />
-        </a>
-        <nav className="desktop-nav" aria-label="Primary navigation">
-          <a href="#about">About</a>
-          <a href="#work">What we do</a>
-          <a href="#solutions">Solutions</a>
-          <a href="#impact">Impact</a>
-        </nav>
-        <a className="pill-button header-button" href="#contact">
-          Work with us <ArrowUpRight size={17} strokeWidth={2.2} />
-        </a>
-      </header>
+      <SiteHeader />
 
       <section className="hero" id="top">
         <Image
@@ -214,14 +202,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="site-footer section-shell">
-        <div className="footer-brand">
-          <Image src="/zira-logo.png" alt="ZiRA Green Futures Initiative" width={1642} height={578} sizes="180px" />
-          <p>Equity · Inclusivity · Impact</p>
-        </div>
-        <div className="footer-location"><MapPin size={18} /> Abuja, Nigeria</div>
-        <div className="footer-links"><a href="https://instagram.com/zira_green26">Instagram</a><a href="#top">Back to top ↑</a></div>
-      </footer>
+      <SiteFooter />
     </main>
   );
 }
